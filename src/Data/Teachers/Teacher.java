@@ -17,6 +17,32 @@ public abstract class Teacher {
     }
 
     //methods
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public int getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public void setBaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
+    }
+
+
+    //abstract methods
     public abstract double calculateSalary();
 
 

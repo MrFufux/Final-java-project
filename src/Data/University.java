@@ -22,6 +22,12 @@ public class University {
 
     }
 
+    //methods
+   public void addTeacher(Teacher teacher){
+        teacherList.add(teacher);
+   }
 
-
+    public List<Teacher> getTeacherList() {
+        return teacherList;
+    }
 }
