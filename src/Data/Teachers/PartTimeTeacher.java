@@ -10,6 +10,7 @@ public class PartTimeTeacher extends Teacher{
         this.hoursPerWeek = hoursPerWeek;
     }
 
+    //methods
     @Override
     public double calculateSalary() {
         return this.baseSalary * 0.0052 * hoursPerWeek; //week payment

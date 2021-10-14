@@ -19,6 +19,9 @@ public class Course {
     }
 
     //methods
+    public void addStudents(Student student){
+        this.studentCourseList.add(student);
+    }
 
     public String getCourseName() {
         return courseName;

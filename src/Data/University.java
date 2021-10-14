@@ -24,10 +24,26 @@ public class University {
 
     //methods
    public void addTeacher(Teacher teacher){
-        teacherList.add(teacher);
+        this.teacherList.add(teacher);
+   }
+
+   public void addCourse(Course course){
+        this.courseList.add(course);
+   }
+
+   public void addStudent(Student student){
+        this.studentList.add(student);
    }
 
     public List<Teacher> getTeacherList() {
         return teacherList;
+    }
+
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public List<Course> getCourseList() {
+        return courseList;
     }
 }
