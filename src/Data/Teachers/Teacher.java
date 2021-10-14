@@ -3,6 +3,6 @@ package Data.Teachers;
 public abstract class Teacher {
 
     //attributes
-    protected String teacherName = "Profesor";
-    protected double baseSalary = 6570;
+    protected String teacherName;
+    protected double baseSalary;
 }
