@@ -52,8 +52,6 @@ public class Main {
         universityManitoba.addCourse(new Course("Dramatic Art",502,universityManitoba.getTeacherList().get(2)));
 
 
-
-
         for (Student i:universityManitoba.getStudentList()) {
             System.out.println(i.getStudentName());
         }
