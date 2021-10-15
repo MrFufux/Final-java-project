@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        boolean exitApp = true;
         int selection;
         Scanner scan = new Scanner(System.in);
         University universityManitoba = new University();
@@ -28,14 +29,14 @@ public class Main {
         universityManitoba.addTeacher(new FullTimeTeacher("Adolfo de Jesús Hitler", 1000,1));
 
         //creation of part time teacher
-        universityManitoba.addTeacher(new PartTimeTeacher("Stalin Hernandez", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Rigoberto Casanueva", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Leandro Jimenez", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Andrea Quintero", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Luisa Loaiza", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Ana Milerga", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Christian Gomez", 90000,90));
-        universityManitoba.addTeacher(new PartTimeTeacher("Benedict Baufthein", 90000,90));
+        universityManitoba.addTeacher(new PartTimeTeacher("Stalin Hernandez", 500,5));
+        universityManitoba.addTeacher(new PartTimeTeacher("Rigoberto Casanueva", 500,5));
+        universityManitoba.addTeacher(new PartTimeTeacher("Leandro Jimenez", 900,9));
+        universityManitoba.addTeacher(new PartTimeTeacher("Andrea Quintero", 1000,10));
+        universityManitoba.addTeacher(new PartTimeTeacher("Luisa Loaiza", 800,8));
+        universityManitoba.addTeacher(new PartTimeTeacher("Ana Milerga", 700,7));
+        universityManitoba.addTeacher(new PartTimeTeacher("Christian Gomez", 900,9));
+        universityManitoba.addTeacher(new PartTimeTeacher("Benedict Baufthein", 600,6));
 
         //creation of students
         universityManitoba.addStudent(new Student(1,"Pancrasita Jimenez", 19));
@@ -46,15 +47,12 @@ public class Main {
 
         //Creation of courses
         universityManitoba.addCourse(new Course("Math",101,universityManitoba.getTeacherList().get(0)));
-        universityManitoba.addCourse(new Course("Marxisms",801,universityManitoba.getTeacherList().get(4)));
+        universityManitoba.addCourse(new Course("Bussiness Planning",801,universityManitoba.getTeacherList().get(4)));
         universityManitoba.addCourse(new Course("Organic Chemistry",207,universityManitoba.getTeacherList().get(6)));
         universityManitoba.addCourse(new Course("Dramatic Art",502,universityManitoba.getTeacherList().get(2)));
 
 
 
-        for (Teacher i: universityManitoba.getTeacherList()) {
-            System.out.println(i.getTeacherName());
-        }
 
         for (Student i:universityManitoba.getStudentList()) {
             System.out.println(i.getStudentName());
@@ -64,32 +62,40 @@ public class Main {
             System.out.println(i.getCourseName());
         }
 
-        System.out.println("\nHello User! Welcome to the Manitoba Campus of the Awesome University. Interface.\n\n" +
-                "PLEASE CHOOSE AN OPTION TO PROCEED: \n" +
-                "(1) Teacher List.\n" +
-                "(2) All the courses at the campus.\n" +
-                "(4) Register a new Student.\n" +
-                "(5) Register a new Course.\n" +
-                "(6) Exit");
+        while(exitApp){
+            System.out.println("\nHello User! Welcome to the Manitoba Campus of the Awesome University. Interface.\n\n" +
+                    "PLEASE CHOOSE AN OPTION TO PROCEED: \n" +
+                    "(1) Teacher List.\n" +
+                    "(2) All the courses at the campus.\n" +
+                    "(3) Register a new Student.\n" +
+                    "(4) Register a new Course.\n" +
+                    "(5) Exit");
 
-        selection = scan.nextInt();
+            selection = scan.nextInt();
 
-        switch (selection){
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            default:
-                break;
+            switch (selection){
+                case 1:
+                    for (Teacher i: universityManitoba.getTeacherList()) {
+                        System.out.println("Id: " + i.getTeacherId() + " " + "Teacher: " + i.getTeacherName() + " " + "Salary: " + i.getBaseSalary() );
+                    }
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    System.out.println("Thanks for using the the Manitoba Campus of the Awesome University. Interface. C you later :D ");
+                    exitApp = false;
+                    break;
+                default:
+                    break;
+            }
         }
+
 
 
 

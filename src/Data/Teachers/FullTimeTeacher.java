@@ -24,4 +24,6 @@ public class FullTimeTeacher extends Teacher {
     public void setYearsOfExperience(int yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
+
+
 }

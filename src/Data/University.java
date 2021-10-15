@@ -23,8 +23,8 @@ public class University {
     }
 
     //methods
-   public void addTeacher(Teacher teacher){
-        this.teacherList.add(teacher);
+   public void addTeacher(Teacher teacher) {
+       this.teacherList.add(teacher);
    }
 
    public void addCourse(Course course){
@@ -38,6 +38,7 @@ public class University {
     public List<Teacher> getTeacherList() {
         return teacherList;
     }
+
 
     public List<Student> getStudentList() {
         return studentList;
