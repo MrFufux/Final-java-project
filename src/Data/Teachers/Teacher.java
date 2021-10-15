@@ -43,7 +43,7 @@ public abstract class Teacher {
 
 
     //abstract methods
-    public abstract double calculateSalary();
+    public abstract int calculateSalary();
 
 
 }

@@ -71,17 +71,39 @@ public class Main {
 
             selection = scan.nextInt();
 
+
             switch (selection){
                 case 1:
+                    System.out.println("-------------------------Teachers List-----------------------------");
                     for (Teacher i: universityManitoba.getTeacherList()) {
-                        System.out.println("Id: " + i.getTeacherId() + " " + "Teacher: " + i.getTeacherName() + " " + "Salary: " + i.getBaseSalary() );
+                        System.out.println(" Id: " + i.getTeacherId() + "\n " + "Name: " + i.getTeacherName() +
+                                "\n " + "Base Salary: $" + i.getBaseSalary() + "\n " + "Calculated Salary: $" +
+                                i.calculateSalary() + "\n"+" --------------------------------------------" );
                     }
-
                     break;
                 case 2:
 
                     break;
                 case 3:
+                    Scanner newId = new Scanner(System.in);
+
+                    System.out.println("Type the student's Id: ");
+                    int id = newId.nextInt();
+
+                    Scanner newName = new Scanner(System.in);
+                    System.out.println("Type the student's name: ");
+                    String name = newName.nextLine();
+
+                    Scanner newAge = new Scanner(System.in);
+                    System.out.println("Type the student's age: ");
+                    int age = newAge.nextInt();
+
+                    universityManitoba.addStudent(new Student(id,name,age));
+                    System.out.println("------------Student's List---------------");
+                    for (Student i:universityManitoba.getStudentList()) {
+                        System.out.println("Id: " + i.getIdStudent() + ". Name: " +
+                                i.getStudentName() + ". Age: " + i.getAge() + ".");
+                    }
                     break;
                 case 4:
                     break;

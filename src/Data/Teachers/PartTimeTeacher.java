@@ -5,15 +5,15 @@ public class PartTimeTeacher extends Teacher{
     private int hoursPerWeek;
 
     //Constructor
-    public PartTimeTeacher(String name, double salary, int hoursPerWeek) {
+    public PartTimeTeacher(String name, int salary, int hoursPerWeek) {
         super(name, salary);
         this.hoursPerWeek = hoursPerWeek;
     }
 
     //methods
     @Override
-    public double calculateSalary() {
-        return this.baseSalary * 0.0052 * hoursPerWeek; //week payment
+    public int calculateSalary() {
+        return (int) (this.baseSalary * 0.0052 * hoursPerWeek); //week payment
     }
 
     public int getHoursPerWeek() {

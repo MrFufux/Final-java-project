@@ -6,15 +6,15 @@ public class FullTimeTeacher extends Teacher {
     private int yearsOfExperience;
 
     //Constructor
-    public FullTimeTeacher(String name, double salary, int yearsOfExperience) {
+    public FullTimeTeacher(String name, int salary, int yearsOfExperience) {
         super(name, salary);
         this.yearsOfExperience = yearsOfExperience;
     }
 
     //methods
     @Override
-    public double calculateSalary() {
-        return this.baseSalary * 1.10 ; //110%
+    public int calculateSalary() {
+        return (int) (this.baseSalary * 1.10); //110%
     }
 
     public int getYearsOfExperience() {
