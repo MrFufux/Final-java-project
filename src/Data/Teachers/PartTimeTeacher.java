@@ -13,7 +13,7 @@ public class PartTimeTeacher extends Teacher{
     //methods
     @Override
     public int calculateSalary() {
-        return (int) (this.baseSalary * 0.0052 * hoursPerWeek); //week payment
+        return (int) (super.baseSalary * 0.0052 * hoursPerWeek); //week payment
     }
 
     public int getHoursPerWeek() {

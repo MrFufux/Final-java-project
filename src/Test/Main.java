@@ -41,7 +41,6 @@ public class Main {
         //creation of students
         universityManitoba.addStudent(new Student(1,"Pancrasita Jimenez", 19));
         universityManitoba.addStudent(new Student(2,"Juan Vera", 17));
-        universityManitoba.addStudent(new Student(3,"Andres Fuentes", 19));
         universityManitoba.addStudent(new Student(4,"Rigoberta Pigman", 25));
         universityManitoba.addStudent(new Student(5,"Carlos Granda", 30));
 
@@ -62,10 +61,10 @@ public class Main {
 
         while(exitApp){
             System.out.println("\nHello User! Welcome to the Manitoba Campus of the Awesome University. Interface.\n\n" +
-                    "PLEASE CHOOSE AN OPTION TO PROCEED: \n" +
+                    "PLEASE C        universityManitoba.addStudent(new Student(3,\"Andres Fuentes\", 19));\nHOOSE AN OPTION TO PROCEED: \n" +
                     "(1) Teacher List.\n" +
                     "(2) All the courses at the campus.\n" +
-                    "(3) Register a new Student.\n" +
+                    "(3) Register a new Student and add it to a course.\n" +
                     "(4) Register a new Course.\n" +
                     "(5) Exit");
 
