@@ -61,10 +61,11 @@ public class Main {
                     "(3) Register a new Student and add it to a course.\n" +
                     "(4) Register a new Course.\n" +
                     "(5) Search Courses by Student\n" +
-                    "(6) Exit");
+                    "(6) Exit\n" +
+                    "-----------------------------------------------------------"
+                    );
 
             selection = scan.nextInt();
-
 
             switch (selection){
                 case 1:
@@ -82,13 +83,33 @@ public class Main {
                        for(int i=1; i <= universityManitoba.getCourseList().size();i++){
                            System.out.println(i + " " + universityManitoba.getCourseList().get(i-1).getCourseName());
                        }
-                        System.out.println("(0) Return");
+                        System.out.println("0 Return");
 
+                       Scanner subOptionScan = new Scanner(System.in);
+                       int subElectionOption = subOptionScan.nextInt();
+
+                       if(subElectionOption > 0 && subElectionOption <= universityManitoba.getCourseList().size()){
+                            universityManitoba.getCourseList().get(subElectionOption - 1).toString();
+
+                           for (Student i: universityManitoba.getCourseList().get(subElectionOption).getStudentCourseList()) {
+                               System.out.println(i.toString());
+                           }
+
+                       } else if(subElectionOption == 0){
+                           subOption = false;
+                       } else {
+                           System.out.println("Invalid Option. Try Again.");
+                       }
 
                     }
 
                     break;
                 case 3:
+                    System.out.println("-----------Student List--------------");
+                    for (Student i:universityManitoba.getStudentList()) {
+                        System.out.println( "Student Id: " + i.getIdStudent() +" " + "Student Name: " + i.getStudentName() +
+                                " " + "Student Age: " + i.getAge());
+                    }
                     Scanner newId = new Scanner(System.in);
 
                     System.out.println("Type the student's Id: ");
@@ -112,6 +133,14 @@ public class Main {
                 case 4:
                     break;
                 case 5:
+                    System.out.println("-----------Student List--------------");
+                    for (Student i:universityManitoba.getStudentList()) {
+                        System.out.println( "Student Id: " + i.getIdStudent() +" " + "Student Name: " + i.getStudentName());
+                    }
+                    System.out.println("Type the Student's Id that you want to search: ");
+                    Scanner scanner = new Scanner(System.in);
+                    int option = scanner.nextInt();
+
                     break;
                 case 6:
                     System.out.println("Thanks for using the the Manitoba Campus of the Awesome University. Interface. C you later :D ");

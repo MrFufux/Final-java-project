@@ -47,11 +47,21 @@ public class Course {
         this.studentCourseList = studentCourseList;
     }
 
-    public Teacher getCourseTeacher() {
-        return courseTeacher;
-    }
 
     public void setCourseTeacher(Teacher courseTeacher) {
         this.courseTeacher = courseTeacher;
     }
+
+
+    public Teacher getCourseTeacher() {
+        return courseTeacher;
+    }
+    public String toString(){
+        return (
+                "Course Name: " + getCourseName() +
+                "/nClass Room: " + getClassRoomAssigned() +
+                "/nTeacher: " + getCourseTeacher().getTeacherName()
+                );
+    }
 }
+
