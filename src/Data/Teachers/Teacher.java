@@ -6,14 +6,16 @@ public abstract class Teacher {
     protected String teacherName;
     protected double baseSalary;
     protected int teacherId;
+    protected String teacherType;
 
     private static int idCounter = 1;
 
     //constructor
-    public Teacher(String name, double salary){
+    public Teacher(String name, double salary, String type){
         this.teacherName = name;
         this.baseSalary = salary;
         this.teacherId = this.idCounter++;
+        this.teacherType = type;
     }
 
     //methods
@@ -27,6 +29,14 @@ public abstract class Teacher {
 
     public int getTeacherId() {
         return teacherId;
+    }
+
+    public String getTeacherType() {
+        return teacherType;
+    }
+
+    public void setTeacherType(String teacherType) {
+        this.teacherType = teacherType;
     }
 
     public void setTeacherName(String teacherName) {

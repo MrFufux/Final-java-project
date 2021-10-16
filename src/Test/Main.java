@@ -19,16 +19,16 @@ public class Main {
         University universityManitoba = new University();
 
         //creation of full time teacher
-        universityManitoba.addTeacher(new FullTimeTeacher("Ricardo Guantamo", 2000,2));
-        universityManitoba.addTeacher(new FullTimeTeacher("Juan Rebolledo", 1000,1));
-        universityManitoba.addTeacher(new FullTimeTeacher("Juana de Arco", 3000,3));
-        universityManitoba.addTeacher(new FullTimeTeacher("Romina La Buena", 2000,2));
+        universityManitoba.addTeacher(new FullTimeTeacher("Ricardo Guantamo", 2000,2,"Full Time Teacher"));
+        universityManitoba.addTeacher(new FullTimeTeacher("Juan Rebolledo", 1000,1,"Full Time Teacher"));
+        universityManitoba.addTeacher(new FullTimeTeacher("Juana de Arco", 3000,3,"Full Time Teacher"));
+        universityManitoba.addTeacher(new FullTimeTeacher("Romina La Buena", 2000,2,"Full Time Teacher"));
 
         //creation of part time teacher
-        universityManitoba.addTeacher(new PartTimeTeacher("Stalin Hernandez", 500,5));
-        universityManitoba.addTeacher(new PartTimeTeacher("Rigoberto Casanueva", 500,5));
-        universityManitoba.addTeacher(new PartTimeTeacher("Leandro Jimenez", 900,9));
-        universityManitoba.addTeacher(new PartTimeTeacher("Andrea Quintero", 1000,10));
+        universityManitoba.addTeacher(new PartTimeTeacher("Stalin Hernandez", 500,5, "Part Time Teacher"));
+        universityManitoba.addTeacher(new PartTimeTeacher("Rigoberto Casanueva", 500,5, "Part Time Teacher"));
+        universityManitoba.addTeacher(new PartTimeTeacher("Leandro Jimenez", 900,9, "Part Time Teacher"));
+        universityManitoba.addTeacher(new PartTimeTeacher("Andrea Quintero", 1000,10, "Part Time Teacher"));
 
         //creation of students
         universityManitoba.addStudent(new Student(1,"Pancrasita Jimenez", 19));
@@ -73,7 +73,8 @@ public class Main {
                     for (Teacher i: universityManitoba.getTeacherList()) {
                         System.out.println(" Id: " + i.getTeacherId() + "\n " + "Name: " + i.getTeacherName() +
                                 "\n " + "Base Salary: $" + i.getBaseSalary() + "\n " + "Calculated Salary: $" +
-                                i.calculateSalary() + "\n"+" --------------------------------------------" );
+                                i.calculateSalary() + "\n"+ " Teacher Type: " + i.getTeacherType() + "\n" +
+                                " --------------------------------------------" );
                     }
                     break;
                 case 2:

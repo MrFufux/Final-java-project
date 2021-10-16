@@ -5,8 +5,8 @@ public class PartTimeTeacher extends Teacher{
     private int hoursPerWeek;
 
     //Constructor
-    public PartTimeTeacher(String name, int salary, int hoursPerWeek) {
-        super(name, salary);
+    public PartTimeTeacher(String name, int salary, int hoursPerWeek, String type) {
+        super(name, salary, type);
         this.hoursPerWeek = hoursPerWeek;
     }
 

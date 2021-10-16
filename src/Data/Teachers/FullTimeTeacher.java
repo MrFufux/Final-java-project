@@ -6,8 +6,8 @@ public class FullTimeTeacher extends Teacher {
     private int yearsOfExperience;
 
     //Constructor
-    public FullTimeTeacher(String name, int salary, int yearsOfExperience) {
-        super(name, salary);
+    public FullTimeTeacher(String name, int salary, int yearsOfExperience, String type) {
+        super(name, salary, type);
         this.yearsOfExperience = yearsOfExperience;
     }
 
