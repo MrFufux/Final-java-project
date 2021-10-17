@@ -36,7 +36,11 @@ public class University {
    }
 
     public void setAddStudentToCourse(int courseId, int studentId){
-        this.courseList.get(courseId-1).setAdStudent(this.studentList.get(studentId -1));
+        this.courseList.get(courseId-1).setAddStudent(this.studentList.get(studentId -1));
+    }
+
+    public void setAddNewCourse(String courseName,int classroomNumber,Teacher teacher){
+        this.courseList.add(new Course(courseName, classroomNumber, teacher));
     }
 
     public List<Teacher> getTeacherList() {

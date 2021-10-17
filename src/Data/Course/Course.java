@@ -43,7 +43,7 @@ public class Course {
         return studentCourseList;
     }
 
-    public void setAdStudent(Student student){
+    public void setAddStudent(Student student){
         this.studentCourseList.add(student);
     }
 
@@ -67,7 +67,6 @@ public class Course {
                 "Course Name: " + getCourseName() +
                 "\nClass Room: " + getClassRoomAssigned() +
                 "\nTeacher: " + getCourseTeacher().getTeacherName() +
-                "\nStudent: " + getStudentCourseList().get(0) +
                 "\n-------------------------------------------"
                 );
     }

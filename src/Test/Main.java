@@ -184,28 +184,20 @@ public class Main {
                     int newClassRoom = scanned.nextInt();
                     System.out.println("-------------------------Teachers List-----------------------------");
                     for (Teacher i : universityManitoba.getTeacherList()) {
-                        System.out.println(" Id: " + i.getTeacherId() + "\n " + "Name: " + i.getTeacherName() +
-                                "\n " + "Base Salary: $" + i.getBaseSalary() + "\n " + "Calculated Salary: $" +
-                                i.calculateSalary() + "\n" + " Teacher Type: " + i.getTeacherType() + "\n" +
+                        System.out.println(" Id: " + i.getTeacherId() + "\n " + "Name: " + i.getTeacherName() + "\n" +
                                 " --------------------------------------------");
                     }
-
                         System.out.println("Please add the Id of the teacher that you want to add to the new Course: ");
                         Scanner sc = new Scanner(System.in);
                         int teacherName = sc.nextInt();
 
-                        System.out.println("Choose the id of the student that you want to add to the course: ");
-                        int studentId = sc.nextInt();
+                        universityManitoba.setAddNewCourse(newCourse,newClassRoom,
+                                universityManitoba.getTeacherList().get(teacherName -1));
+                    System.out.println("Your new course is successfully created!");
 
-                        universityManitoba.addCourse(new Course(newCourse, newClassRoom,
-                                universityManitoba.getTeacherList().get(teacherName -1),
-                                universityManitoba.getStudentList().get(studentId -1)));
-
-                    for (Course i: universityManitoba.getCourseList()) {
-                        System.out.println(i);
-                    }
-
-
+//                    for (Course i: universityManitoba.getCourseList()) {
+//                        System.out.println(i);
+//                    }
                         break;
 
                 case 5:
