@@ -103,7 +103,7 @@ public class Main {
                     while (subOption) {
                         System.out.println("Select the course to show information: ");
                         for (int i = 1; i <= universityManitoba.getCourseList().size(); i++) {
-                            System.out.println(i + " " + universityManitoba.getCourseList().get(i - 1).getCourseName());
+                            System.out.println(i + " " + universityManitoba.getCourseList().get(i-1).getCourseName());
                         }
                         System.out.println("0 Return");
 
@@ -111,13 +111,11 @@ public class Main {
                         int subElectionOption = subOptionScan.nextInt();
 
                         if (subElectionOption > 0 && subElectionOption <= universityManitoba.getCourseList().size()) {
-                            universityManitoba.getCourseList().get(subElectionOption - 1).toString();
+                            universityManitoba.getCourseList().get(subElectionOption-1).toString();
 
-                            for (Student i : universityManitoba.getCourseList().get(subElectionOption).getStudentCourseList()) {
+                            for (Student i : universityManitoba.getCourseList().get(subElectionOption-1).getStudentCourseList()) {
                                 System.out.println(i.toString());
                             }
-
-
 
                         } else if (subElectionOption == 0) {
                             subOption = false;
@@ -154,7 +152,7 @@ public class Main {
                                 int age = newAge.nextInt();
 
                                 universityManitoba.addStudent(new Student(id, name, age));
-                                System.out.println("Student Successfully added!");
+                                System.out.println("Student Successfully added!\n");
                                 break;
                             case 2:
 
@@ -208,6 +206,19 @@ public class Main {
 //                                }
                                 break;
                             case 2:
+                                System.out.println("Type the Id of the Student that you're going to Add: ");
+                                Scanner subMenu4Scanner = new Scanner(System.in);
+                                int studentCourseList = subMenu4Scanner.nextInt();
+                                System.out.println("Type the Id of the course that the student will be added: ");
+                                int courseId = subMenu4Scanner.nextInt();
+
+                                if(studentCourseList > 0 && courseId > 0 && studentCourseList <= universityManitoba.getStudentList().size() && courseId <= universityManitoba.getCourseList().size())
+                                {
+                                    universityManitoba.setAddStudentToCourse(courseId,studentCourseList);
+                                    System.out.println(universityManitoba.getCourseList().get(courseId).getStudentCourseList().get(studentCourseList).toString());
+                                } else{
+                                    System.out.println("Wrong option. Try again.");
+                                }
                                 break;
                             case 0:
                                 subMenu4 = false;
@@ -217,13 +228,11 @@ public class Main {
                                 break;
                         }
                     }
-
                         break;
-
                 case 5:
                     System.out.println("-----------Student List--------------");
-                    for (Student ii : universityManitoba.getStudentList()) {
-                        System.out.println("Student Id: " + ii.getIdStudent() + " " + "Student Name: " + ii.getStudentName());
+                    for (Student e : universityManitoba.getStudentList()) {
+                        System.out.println("Student Id: " + e.getIdStudent() + " " + "Student Name: " + e.getStudentName());
                     }
                     System.out.println("Type the Student's Id that you want to search: ");
                     Scanner scanner = new Scanner(System.in);

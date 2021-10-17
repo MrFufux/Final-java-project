@@ -1,5 +1,7 @@
 package com.java.data.Student;
 
+import java.util.List;
+
 public class Student {
     //attributes
     private int idStudent;
@@ -36,5 +38,11 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+
+    public String toString(){
+        return ("--------------------\n" +"Id: " + getIdStudent()+ "\n" + "Name: " + getStudentName() +
+                "\n" + "Age: " + getAge() + "\n--------------------\n");
     }
 }

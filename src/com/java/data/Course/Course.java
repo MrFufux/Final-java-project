@@ -61,15 +61,5 @@ public class Course {
     }
 
 
-
-    public String toString(){
-        return (
-                "Course Name: " + getCourseName() +
-                "\nClass Room: " + getClassRoomAssigned() +
-                "\nTeacher: " + getCourseTeacher().getTeacherName() +
-                "\n-------------------------------------------"
-                );
-    }
-
 }
 
