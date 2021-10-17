@@ -8,9 +8,11 @@ import java.util.List;
 
 public class Course {
     //attributes
+
     private String courseName;
     private int classRoomAssigned;
     private List<Student> studentCourseList;
+    private List<Teacher> teacherCourseList;
     private Teacher courseTeacher;
 
 
@@ -49,6 +51,10 @@ public class Course {
 
     public void setStudentCourseList(List<Student> studentCourseList) {
         this.studentCourseList = studentCourseList;
+    }
+    public List<Teacher> getTeacherCourseList() {
+
+        return teacherCourseList;
     }
 
 

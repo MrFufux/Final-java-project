@@ -55,4 +55,6 @@ public class University {
     public List<Course> getCourseList() {
         return courseList;
     }
+
+
 }

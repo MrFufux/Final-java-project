@@ -206,6 +206,10 @@ public class Main {
 //                                }
                                 break;
                             case 2:
+                                for (Student i:universityManitoba.getStudentList()) {
+                                    System.out.println("Student Id: " + i.getIdStudent() + " Student Name: " + i.getStudentName());
+                                }
+
                                 System.out.println("Type the Id of the Student that you're going to Add: ");
                                 Scanner subMenu4Scanner = new Scanner(System.in);
                                 int studentCourseList = subMenu4Scanner.nextInt();

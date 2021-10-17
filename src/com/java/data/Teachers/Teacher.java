@@ -1,5 +1,9 @@
 package com.java.data.Teachers;
 
+import com.java.data.Student.Student;
+
+import java.util.List;
+
 public abstract class Teacher {
 
     //attributes
@@ -7,6 +11,7 @@ public abstract class Teacher {
     protected double baseSalary;
     protected int teacherId;
     protected String teacherType;
+    
 
     private static int idCounter = 1;
 
@@ -34,7 +39,7 @@ public abstract class Teacher {
     public String getTeacherType() {
         return teacherType;
     }
-
+    
     public void setTeacherType(String teacherType) {
         this.teacherType = teacherType;
     }
@@ -54,6 +59,5 @@ public abstract class Teacher {
 
     //abstract methods
     public abstract int calculateSalary();
-
 
 }
