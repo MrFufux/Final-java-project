@@ -176,28 +176,48 @@ public class Main {
 
                     break;
                 case 4:
-                    Scanner scanned = new Scanner(System.in);
-                    System.out.println("Type the name of the new course: ");
-                    String newCourse = scanned.nextLine();
+                    boolean subMenu4 = true;
+                    while(subMenu4){
+                        Scanner subMenu3Scanner = new Scanner(System.in);
+                        System.out.println("Select an Option: \n(1) Create a Course \n(2) Add Student to a Course \n(0) Return");
+                        int subMenu4Select = subMenu3Scanner.nextInt();
 
-                    System.out.println("Type the assigned classroom: ");
-                    int newClassRoom = scanned.nextInt();
-                    System.out.println("-------------------------Teachers List-----------------------------");
-                    for (Teacher i : universityManitoba.getTeacherList()) {
-                        System.out.println(" Id: " + i.getTeacherId() + "\n " + "Name: " + i.getTeacherName() + "\n" +
-                                " --------------------------------------------");
+                        switch (subMenu4Select){
+                            case 1:
+                                Scanner scanned = new Scanner(System.in);
+                                System.out.println("Type the name of the new course: ");
+                                String newCourse = scanned.nextLine();
+
+                                System.out.println("Type the assigned classroom: ");
+                                int newClassRoom = scanned.nextInt();
+                                System.out.println("-------------------------Teachers List-----------------------------");
+                                for (Teacher i : universityManitoba.getTeacherList()) {
+                                    System.out.println(" Id: " + i.getTeacherId() + "\n " + "Name: " + i.getTeacherName() + "\n" +
+                                            " --------------------------------------------");
+                                }
+                                System.out.println("Please add the Id of the teacher that you want to add to the new Course: ");
+                                Scanner sc = new Scanner(System.in);
+                                int teacherName = sc.nextInt();
+
+                                universityManitoba.setAddNewCourse(newCourse,newClassRoom,
+                                        universityManitoba.getTeacherList().get(teacherName -1));
+                                System.out.println("Your new course is successfully created!\n");
+
+//                               for (Course i: universityManitoba.getCourseList()) {
+//                                    System.out.println(i);
+//                                }
+                                break;
+                            case 2:
+                                break;
+                            case 0:
+                                subMenu4 = false;
+                                break;
+                            default:
+                                System.out.println("Invalid option. Try again.");
+                                break;
+                        }
                     }
-                        System.out.println("Please add the Id of the teacher that you want to add to the new Course: ");
-                        Scanner sc = new Scanner(System.in);
-                        int teacherName = sc.nextInt();
 
-                        universityManitoba.setAddNewCourse(newCourse,newClassRoom,
-                                universityManitoba.getTeacherList().get(teacherName -1));
-                    System.out.println("Your new course is successfully created!");
-
-//                    for (Course i: universityManitoba.getCourseList()) {
-//                        System.out.println(i);
-//                    }
                         break;
 
                 case 5:
