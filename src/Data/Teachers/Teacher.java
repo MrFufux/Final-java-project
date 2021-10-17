@@ -11,10 +11,10 @@ public abstract class Teacher {
     private static int idCounter = 1;
 
     //constructor
-    public Teacher(String name, double salary, String type){
+    public Teacher(int idCounter, String name, double salary, String type){
         this.teacherName = name;
         this.baseSalary = salary;
-        this.teacherId = this.idCounter++;
+        this.teacherId = idCounter++;
         this.teacherType = type;
     }
 

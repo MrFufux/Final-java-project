@@ -3,6 +3,7 @@ package Data.Course;
 import Data.Student.Student;
 import Data.Teachers.Teacher;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
@@ -12,17 +13,15 @@ public class Course {
     private List<Student> studentCourseList;
     private Teacher courseTeacher;
 
+
     public Course(String courseName, int classRoomAssigned, Teacher courseTeacher){
         this.courseName = courseName;
         this.classRoomAssigned = classRoomAssigned;
         this.courseTeacher = courseTeacher;
+        this.studentCourseList = new ArrayList<>();
     }
 
     //methods
-    public void addStudents(Student student){
-        this.studentCourseList.add(student);
-    }
-
     public String getCourseName() {
         return courseName;
     }
@@ -40,7 +39,12 @@ public class Course {
     }
 
     public List<Student> getStudentCourseList() {
+
         return studentCourseList;
+    }
+
+    public void setAdStudent(Student student){
+        this.studentCourseList.add(student);
     }
 
     public void setStudentCourseList(List<Student> studentCourseList) {
@@ -52,16 +56,21 @@ public class Course {
         this.courseTeacher = courseTeacher;
     }
 
-
     public Teacher getCourseTeacher() {
         return courseTeacher;
     }
+
+
+
     public String toString(){
         return (
                 "Course Name: " + getCourseName() +
-                "/nClass Room: " + getClassRoomAssigned() +
-                "/nTeacher: " + getCourseTeacher().getTeacherName()
+                "\nClass Room: " + getClassRoomAssigned() +
+                "\nTeacher: " + getCourseTeacher().getTeacherName() +
+                "\nStudent: " + getStudentCourseList().get(0) +
+                "\n-------------------------------------------"
                 );
     }
+
 }
 

@@ -16,9 +16,9 @@ public class University {
 
     //Constructor
     public University(){
-        this.studentList = new ArrayList<Student>();
-        this.teacherList = new ArrayList<Teacher>();
-        this.courseList = new ArrayList<Course>();
+        this.studentList = new ArrayList<>();
+        this.teacherList = new ArrayList<>();
+        this.courseList = new ArrayList<>();
 
     }
 
@@ -35,6 +35,9 @@ public class University {
         this.studentList.add(student);
    }
 
+    public void setAddStudentToCourse(int courseId, int studentId){
+        this.courseList.get(courseId-1).setAdStudent(this.studentList.get(studentId -1));
+    }
 
     public List<Teacher> getTeacherList() {
         return teacherList;
