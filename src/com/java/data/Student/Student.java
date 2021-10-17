@@ -45,4 +45,5 @@ public class Student {
         return ("--------------------\n" +"Id: " + getIdStudent()+ "\n" + "Name: " + getStudentName() +
                 "\n" + "Age: " + getAge() + "\n--------------------\n");
     }
+
 }

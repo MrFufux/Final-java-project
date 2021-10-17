@@ -236,11 +236,24 @@ public class Main {
                 case 5:
                     System.out.println("-----------Student List--------------");
                     for (Student e : universityManitoba.getStudentList()) {
-                        System.out.println("Student Id: " + e.getIdStudent() + " " + "Student Name: " + e.getStudentName());
+                        System.out.println("Id: " + e.getIdStudent() + " " + "Student Name: " + e.getStudentName());
                     }
                     System.out.println("Type the Student's Id that you want to search: ");
                     Scanner scanner = new Scanner(System.in);
                     int option = scanner.nextInt();
+                    if(option > 0 && option <= universityManitoba.getStudentList().size()){
+                        System.out.println(universityManitoba.getStudentList().get(option -1).toString());
+                        System.out.println(universityManitoba.getStudentList().get(option -1).getStudentName() +
+                                " is registered in the following courses: \n");
+                        for (Course e: universityManitoba.getCourseList()){
+                            for (Student o: e.getStudentCourseList()){
+                                if(option == o.getIdStudent()){
+                                    System.out.println(e.getCourseName());
+                                }
+                            }
+                        }
+                        System.out.println("\n---------------------------------");
+                    }
 
                     break;
                 case 6:
