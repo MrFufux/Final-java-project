@@ -29,7 +29,6 @@ public class Course {
     }
 
     public List<Student> getStudentCourseList() {
-
         return studentCourseList;
     }
 
