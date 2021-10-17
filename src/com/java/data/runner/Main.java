@@ -242,7 +242,7 @@ public class Main {
                     Scanner scanner = new Scanner(System.in);
                     int option = scanner.nextInt();
                     if(option > 0 && option <= universityManitoba.getStudentList().size()){
-                        System.out.println(universityManitoba.getStudentList().get(option -1).toString());
+                        System.out.println("\n------------------------------------------------------------------");
                         System.out.println(universityManitoba.getStudentList().get(option -1).getStudentName() +
                                 " is registered in the following courses: \n");
                         for (Course e: universityManitoba.getCourseList()){
@@ -252,7 +252,7 @@ public class Main {
                                 }
                             }
                         }
-                        System.out.println("\n---------------------------------");
+                        System.out.println("\n------------------------------------------------------------------");
                     }
 
                     break;
