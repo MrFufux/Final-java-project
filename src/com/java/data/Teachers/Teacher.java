@@ -15,7 +15,6 @@ public abstract class Teacher {
 
     private static int idCounter = 1;
 
-    //constructor
     public Teacher(int idCounter, String name, double salary, String type){
         this.teacherName = name;
         this.baseSalary = salary;
@@ -23,7 +22,6 @@ public abstract class Teacher {
         this.teacherType = type;
     }
 
-    //methods
     public String getTeacherName() {
         return teacherName;
     }
@@ -56,8 +54,6 @@ public abstract class Teacher {
         this.teacherId = teacherId;
     }
 
-
-    //abstract methods
     public abstract int calculateSalary();
 
 }

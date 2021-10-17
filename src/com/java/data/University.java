@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class University {
-    //Attributes
     List<Student> studentList;
     List<Teacher> teacherList;
     List<Course> courseList;
 
-    //Constructor
     public University(){
         this.studentList = new ArrayList<>();
         this.teacherList = new ArrayList<>();
@@ -22,7 +20,6 @@ public class University {
 
     }
 
-    //methods
    public void addTeacher(Teacher teacher) {
        this.teacherList.add(teacher);
    }

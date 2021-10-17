@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
-    //attributes
 
     private String courseName;
     private int classRoomAssigned;
@@ -23,7 +22,6 @@ public class Course {
         this.studentCourseList = new ArrayList<>();
     }
 
-    //methods
     public String getCourseName() {
         return courseName;
     }

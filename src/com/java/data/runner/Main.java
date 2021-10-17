@@ -18,19 +18,16 @@ public class Main {
 
         University universityManitoba = new University();
 
-        //creation of full time teacher
         universityManitoba.addTeacher(new FullTimeTeacher(1,"Ricardo Guantamo", 2000, 2, "Full Time Teacher"));
         universityManitoba.addTeacher(new FullTimeTeacher(2,"Juan Rebolledo", 1000, 1, "Full Time Teacher"));
         universityManitoba.addTeacher(new FullTimeTeacher(3,"Juana de Arco", 3000, 3, "Full Time Teacher"));
         universityManitoba.addTeacher(new FullTimeTeacher(4,"Romina La Buena", 2000, 2, "Full Time Teacher"));
 
-        //creation of part-time teacher
         universityManitoba.addTeacher(new PartTimeTeacher(5,"Stalin Hernandez", 500, 5, "Part Time Teacher"));
         universityManitoba.addTeacher(new PartTimeTeacher(6,"Rigoberto Casanueva", 500, 5, "Part Time Teacher"));
         universityManitoba.addTeacher(new PartTimeTeacher(7,"Leandro Jimenez", 900, 9, "Part Time Teacher"));
         universityManitoba.addTeacher(new PartTimeTeacher(8,"Andrea Quintero", 1000, 10, "Part Time Teacher"));
 
-        //creation of students
         universityManitoba.addStudent(new Student(1, "Pancrasita Jimenez", 19));
         universityManitoba.addStudent(new Student(2, "Juan Vera", 17));
         universityManitoba.addStudent(new Student(3, "Rigoberta Pigman", 25));
@@ -38,14 +35,12 @@ public class Main {
         universityManitoba.addStudent(new Student(5, "Laura Hernandez", 23));
         universityManitoba.addStudent(new Student(6, "Bernardo Casas", 20));
 
-        //Creation of courses
         universityManitoba.addCourse(new Course("Math", 101, universityManitoba.getTeacherList().get(0)));
         universityManitoba.addCourse(new Course("Bussiness Planning", 102, universityManitoba.getTeacherList().get(1)));
         universityManitoba.addCourse(new Course("Organic Chemistry", 103, universityManitoba.getTeacherList().get(2)));
         universityManitoba.addCourse(new Course("Dramatic Art", 104, universityManitoba.getTeacherList().get(3)));
         universityManitoba.addCourse(new Course("Architecture III", 105, universityManitoba.getTeacherList().get(4)));
 
-        //Adding students to a Course
         universityManitoba.setAddStudentToCourse(1,1);
         universityManitoba.setAddStudentToCourse(1,2);
 
@@ -60,19 +55,6 @@ public class Main {
 
         universityManitoba.setAddStudentToCourse(5,4);
         universityManitoba.setAddStudentToCourse(5,6);
-
-
-
-
-        /*
-        for (Student i:universityManitoba.getStudentList()) {
-            System.out.println(i.getStudentName());
-        }
-        */
-        for (Course i: universityManitoba.getCourseList()) {
-            System.out.println(i);
-        }
-
 
         while (exitApp) {
             System.out.println("\nHello User! Welcome to the Manitoba Campus of the Awesome University Interface.\n" +
@@ -183,9 +165,6 @@ public class Main {
                                         universityManitoba.getTeacherList().get(teacherName -1));
                                 System.out.println("Your new course is successfully created!\n");
 
-//                               for (Course i: universityManitoba.getCourseList()) {
-//                                    System.out.println(i);
-//                                }
                                 break;
                             case 2:
                                 for (Student i:universityManitoba.getStudentList()) {

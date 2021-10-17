@@ -8,14 +8,12 @@ public class Student {
     private String studentName;
     private int age;
 
-    //constructor
     public Student(int idStudent, String studentName, int age){
         this.idStudent = idStudent;
         this.studentName = studentName;
         this.age = age;
     }
 
-    //methods
     public int getIdStudent() {
         return idStudent;
     }
