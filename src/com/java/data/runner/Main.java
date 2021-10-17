@@ -1,12 +1,12 @@
-package Test;
+package com.java.data.runner;
 
 
-import Data.Course.Course;
-import Data.Student.Student;
-import Data.Teachers.FullTimeTeacher;
-import Data.Teachers.PartTimeTeacher;
-import Data.Teachers.Teacher;
-import Data.University;
+import com.java.data.Course.Course;
+import com.java.data.Student.Student;
+import com.java.data.Teachers.FullTimeTeacher;
+import com.java.data.Teachers.PartTimeTeacher;
+import com.java.data.Teachers.Teacher;
+import com.java.data.University;
 import java.util.Scanner;
 
 public class Main {

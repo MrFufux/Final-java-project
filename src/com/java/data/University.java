@@ -1,8 +1,8 @@
-package Data;
+package com.java.data;
 
-import Data.Course.Course;
-import Data.Student.Student;
-import Data.Teachers.Teacher;
+import com.java.data.Course.Course;
+import com.java.data.Student.Student;
+import com.java.data.Teachers.Teacher;
 
 
 import java.util.ArrayList;

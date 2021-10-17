@@ -1,4 +1,4 @@
-package Data.Student;
+package com.java.data.Student;
 
 public class Student {
     //attributes

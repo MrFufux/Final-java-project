@@ -1,4 +1,4 @@
-package Data.Teachers;
+package com.java.data.Teachers;
 
 public abstract class Teacher {
 
