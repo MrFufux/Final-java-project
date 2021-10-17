@@ -28,18 +28,6 @@ public class Course {
         return courseName;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public int getClassRoomAssigned() {
-        return classRoomAssigned;
-    }
-
-    public void setClassRoomAssigned(int classRoomAssigned) {
-        this.classRoomAssigned = classRoomAssigned;
-    }
-
     public List<Student> getStudentCourseList() {
 
         return studentCourseList;
@@ -49,23 +37,10 @@ public class Course {
         this.studentCourseList.add(student);
     }
 
-    public void setStudentCourseList(List<Student> studentCourseList) {
-        this.studentCourseList = studentCourseList;
-    }
     public List<Teacher> getTeacherCourseList() {
 
         return teacherCourseList;
     }
-
-
-    public void setCourseTeacher(Teacher courseTeacher) {
-        this.courseTeacher = courseTeacher;
-    }
-
-    public Teacher getCourseTeacher() {
-        return courseTeacher;
-    }
-
 
 }
 

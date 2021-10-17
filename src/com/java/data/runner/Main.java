@@ -79,8 +79,8 @@ public class Main {
                     "\nPLEASE CHOOSE AN OPTION TO PROCEED: \n" +
                     "(1) Teacher List.\n" +
                     "(2) All the courses at the campus.\n" +
-                    "(3) Register a new Student and add it to a course.\n" +
-                    "(4) Register a new Course.\n" +
+                    "(3) Register a new Student.\n" +
+                    "(4) Register a new Course and add a student to a course.\n" +
                     "(5) Search Courses by Student\n" +
                     "(6) Exit\n" +
                     "-----------------------------------------------------------"
@@ -98,6 +98,7 @@ public class Main {
                                 " --------------------------------------------");
                     }
                     break;
+
                 case 2:
                     boolean subOption = true;
                     while (subOption) {
@@ -125,54 +126,35 @@ public class Main {
 
                     }
                     break;
+
                 case 3:
-                    boolean subMenu3 = true;
-                    while (subMenu3){
-                        Scanner subMenu3scan = new Scanner(System.in);
-                        System.out.println("Select an Option: \n(1) Create a Student \n(2) Add Student to a Course \n(0) Return");
-
-                        int subMenu3Option = subMenu3scan.nextInt();
-                        switch (subMenu3Option){
-                            case 1:
-                                Scanner newId = new Scanner(System.in);
-                                System.out.println("-----------Student Id List--------------");
-                                for (Student i : universityManitoba.getStudentList()) {
-                                    System.out.println("Id: " + i.getIdStudent() + "\n--------------------------------");
-                                }
-
-                                System.out.println("Type the student's new Id: ");
-                                int id = newId.nextInt();
-
-                                Scanner newName = new Scanner(System.in);
-                                System.out.println("Type the student's name and last name: ");
-                                String name = newName.nextLine();
-
-                                Scanner newAge = new Scanner(System.in);
-                                System.out.println("Type the student's age: ");
-                                int age = newAge.nextInt();
-
-                                universityManitoba.addStudent(new Student(id, name, age));
-                                System.out.println("Student Successfully added!\n");
-                                break;
-                            case 2:
-
-                                break;
-                            case 0:
-                                subMenu3 = false;
-                                break;
-                            default:
-                                System.out.println("Invalid option. Try again.");
-                                break;
-
-                        }
+                    System.out.println("Select an Option: \n(1) Create a Student \n(2) Add Student to a Course \n(0) Return");
+                    Scanner newId = new Scanner(System.in);
+                    System.out.println("-----------Student Id List--------------");
+                    for (Student i : universityManitoba.getStudentList()) {
+                        System.out.println("Id: " + i.getIdStudent() + "\n--------------------------------");
                     }
+
+                    System.out.println("Type the student's new Id: ");
+                    int id = newId.nextInt();
+
+                    Scanner newName = new Scanner(System.in);
+                    System.out.println("Type the student's name and last name: ");
+                    String name = newName.nextLine();
+
+                    Scanner newAge = new Scanner(System.in);
+                    System.out.println("Type the student's age: ");
+                    int age = newAge.nextInt();
+
+                    universityManitoba.addStudent(new Student(id, name, age));
+                    System.out.println("Student Successfully added!\n");
                     System.out.println("------------Student's List---------------");
                     for (Student i : universityManitoba.getStudentList()) {
                         System.out.println("Id: " + i.getIdStudent() + ". Name: " +
                                 i.getStudentName() + ". Age: " + i.getAge() + ".");
                     }
-
                     break;
+
                 case 4:
                     boolean subMenu4 = true;
                     while(subMenu4){
@@ -212,14 +194,17 @@ public class Main {
 
                                 System.out.println("Type the Id of the Student that you're going to Add: ");
                                 Scanner subMenu4Scanner = new Scanner(System.in);
-                                int studentCourseList = subMenu4Scanner.nextInt();
+                                int studentId = subMenu4Scanner.nextInt();
+                                for (Course i: universityManitoba.getCourseList()) {
+                                    System.out.println(i.getCourseName());
+                                }
                                 System.out.println("Type the Id of the course that the student will be added: ");
                                 int courseId = subMenu4Scanner.nextInt();
 
-                                if(studentCourseList > 0 && courseId > 0 && studentCourseList <= universityManitoba.getStudentList().size() && courseId <= universityManitoba.getCourseList().size())
+                                if(studentId > 0 && courseId > 0 && studentId <= universityManitoba.getStudentList().size() && courseId <= universityManitoba.getCourseList().size())
                                 {
-                                    universityManitoba.setAddStudentToCourse(courseId,studentCourseList);
-                                    System.out.println(universityManitoba.getCourseList().get(courseId).getStudentCourseList().get(studentCourseList).toString());
+                                    universityManitoba.setAddStudentToCourse(courseId,studentId);
+                                    System.out.println(universityManitoba.getCourseList().get(courseId).getStudentCourseList().get(studentId).toString());
                                 } else{
                                     System.out.println("Wrong option. Try again.");
                                 }
